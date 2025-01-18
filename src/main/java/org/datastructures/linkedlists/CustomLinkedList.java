@@ -1,11 +1,10 @@
 package org.datastructures.linkedlists;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
-import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import lombok.*;
 import org.datastructures.interfaces.CustomList;
+
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Implementation of CustomLinked list
@@ -32,7 +31,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
      * @return CustomLinkedList
      * @param <T> Type of List
      */
-    public static <T> CustomLinkedList<T> of(T value) {
+    public static <T> CustomLinkedList<T> of(@NonNull T value) {
         CustomLinkedList<T> linkedList = new CustomLinkedList<T>();
         linkedList.addFirst(value);
         return linkedList;
@@ -44,7 +43,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
      * @return CustomLinkedList
      * @param <T> Type of List
      */
-    public static <T> CustomLinkedList<T> of(T ... values) {
+    public static <T> CustomLinkedList<T> of(@NonNull T ... values) {
         CustomLinkedList<T> linkedList = new CustomLinkedList<T>();
         for (T value : values) {
             linkedList.addLast(value);
@@ -55,10 +54,10 @@ public class CustomLinkedList <T> implements CustomList<T> {
     @AllArgsConstructor
     @RequiredArgsConstructor
     @Builder(setterPrefix = "with")
+    @Getter @Setter
     private static class Node<T> {
         private T value;
         private Node<T> next;
-
     }
 
     @Override
@@ -68,7 +67,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
 
     @Override
     public void addFirst(@NonNull T element) {
-        Node<T> newNode = new Node<>();
+
     }
 
     @Override
@@ -127,7 +126,17 @@ public class CustomLinkedList <T> implements CustomList<T> {
     }
 
     @Override
-    public T poop(@NonNull T element) {
+    public T poll(@NonNull T element) {
+        return null;
+    }
+
+    @Override
+    public boolean hasNext(){
+        return false;
+    }
+
+    @Override
+    public T next(){
         return null;
     }
 }

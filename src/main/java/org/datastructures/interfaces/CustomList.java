@@ -92,5 +92,17 @@ public interface CustomList <T> {
      * @param element element to get and remove
      * @return T element null otherwise
      */
-    T poop(@NonNull T element);
+    T poll(@NonNull T element);
+
+    /**
+     * Determine of List has next element
+     * @return true if list has next element null otherwise
+     */
+    boolean hasNext();
+
+    /**
+     * Returns next element in list
+     * @return next element or null
+     */
+    T next();
 }
