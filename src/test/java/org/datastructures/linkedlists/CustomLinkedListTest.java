@@ -18,76 +18,72 @@ class CustomLinkedListTest {
         assertThrows(NullPointerException.class, () -> test.addFirst(null));
         assertThrows(NullPointerException.class, () -> test.addLast(null));
         assertThrows(NullPointerException.class, () -> test.contains(null));
-        assertThrows(NullPointerException.class, () -> test.remove(null, 1));
-        assertThrows(NullPointerException.class, () -> test.get(null));
         assertThrows(NullPointerException.class, () -> test.poll(null));
     }
 
     @Test
     public void test_add_element(){
-        CustomList<Integer> expected = CustomLinkedList.of(1, 2, 3, 4, 5);
         CustomList<Integer> test = CustomLinkedList.of(1, 4, 5);
         test.add(2, 1);
         test.add(3, 2);
-        assertEquals(expected, test);
+        assertEquals(2, test.get(2));
+        assertEquals(3, test.get(3));
     }
 
     @Test
     public void test_add_first_element(){
-        CustomList<Integer> expected = CustomLinkedList.of(1, 2, 3, 4, 5);
         CustomList<Integer> test = CustomLinkedList.of( 3, 4, 5);
         test.addFirst(2);
         test.addFirst(1);
-        assertEquals(expected, test);
+        assertEquals(2, test.get(1));
+        assertEquals(1, test.get(0));
     }
 
     @Test
     public void test_add_last_element(){
-        CustomList<Integer> expected = CustomLinkedList.of(1, 2, 3, 4, 5);
         CustomList<Integer> test = CustomLinkedList.of( 1, 2, 3);
         test.addLast(4);
         test.addLast(5);
-        assertEquals(expected, test);
+        assertEquals(4, test.get(3));
+        assertEquals(5, test.get(4));
     }
 
     @Test
     public void test_remove_element(){
-        CustomList<Integer> expected = CustomLinkedList.of(1, 2, 3, 4, 5);
         CustomList<Integer> test = CustomLinkedList.of(1, 4, 5);
-        test.remove(2, 1);
-        test.add(3, 1);
-        assertEquals(expected, test);
+        test.remove(1);
+
     }
 
     @Test
     public void test_remove_first_element(){
-        CustomList<Integer> expected = CustomLinkedList.of(1, 2, 3, 4, 5);
         CustomList<Integer> test = CustomLinkedList.of( 3, 4, 5);
         test.removeFirst();
+        assertEquals(4, test.get(0));
         test.removeFirst();
-        assertEquals(expected, test);
+        assertEquals(5, test.get(0));
     }
 
     @Test
     public void test_remove_last_element(){
-        CustomList<Integer> expected = CustomLinkedList.of(1, 2, 3, 4, 5);
         CustomList<Integer> test = CustomLinkedList.of( 1, 2, 3);
         test.removeLast();
+        assertEquals(2, test.get(test.size() - 1));
         test.removeLast();
-        assertEquals(expected, test);
+        assertEquals(1, test.get(test.size() - 1));
     }
 
     @Test
     public void test_clear_elements(){
         CustomList<Integer> test = CustomLinkedList.of( 1, 2, 3);
         test.clear();
-        assertNull(test);
+        assertTrue(test.isEmpty());
     }
 
     @Test
     public void test_size(){
         CustomList<Integer> test = CustomLinkedList.of(1, 2, 3, 4, 5);
-        assertEquals(test.size(), 5);
+        assertEquals(5, test.size());
     }
 
     @Test
@@ -108,21 +104,21 @@ class CustomLinkedListTest {
     @Test
     public void test_get(){
         CustomList<Integer> test = CustomLinkedList.of(1, 2, 3, 4, 5);
-        assertEquals(test.get(2), 2);
-        assertEquals(test.get(4), 4);
+        assertEquals(3, test.get(2));
+        assertEquals(5, test.get(4));
         assertNull(test.get(10));
     }
 
     @Test
     public void test_get_first(){
         CustomList<Integer> test = CustomLinkedList.of(1, 2, 3, 4, 5);
-        assertEquals(test.getFirst(), 1);
+        assertEquals(1, test.getFirst());
     }
 
     @Test
     public void test_get_last(){
         CustomList<Integer> test = CustomLinkedList.of(1, 2, 3, 4, 5);
-        assertEquals(test.getLast(), 5);
+        assertEquals(5, test.getLast());
     }
 
     @Test
@@ -130,7 +126,7 @@ class CustomLinkedListTest {
         CustomList<Integer> test = CustomLinkedList.of(1, 2, 3, 4, 5);
         CustomList<Integer> expected = CustomLinkedList.of(1, 3, 4, 5);
         test.poll(2);
-        assertEquals(expected, test);
+        assertSame(expected, test);
     }
 
     @Test

@@ -1,21 +1,26 @@
 package org.datastructures.linkedlists;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import org.datastructures.interfaces.CustomList;
 
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * Implementation of CustomLinked list
  * @param <T>
  */
-@NoArgsConstructor
 public class CustomLinkedList <T> implements CustomList<T> {
     private Node<T> head;
     private Node<T> tail;
     private int size;
 
+    private CustomLinkedList(){
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
+    }
     /**
      * Static method to create empty list
      * @return CustomLinkedList
@@ -33,7 +38,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
      */
     public static <T> CustomLinkedList<T> of(@NonNull T value) {
         CustomLinkedList<T> linkedList = new CustomLinkedList<T>();
-        linkedList.addFirst(value);
+        linkedList.addLast(value);
         return linkedList;
     }
 
@@ -54,7 +59,6 @@ public class CustomLinkedList <T> implements CustomList<T> {
     @AllArgsConstructor
     @RequiredArgsConstructor
     @Builder(setterPrefix = "with")
-    @Getter @Setter
     private static class Node<T> {
         private T value;
         private Node<T> next;
@@ -67,77 +71,168 @@ public class CustomLinkedList <T> implements CustomList<T> {
 
     @Override
     public void addFirst(@NonNull T element) {
+        Node<T> node = Node.<T>builder()
+                .withValue(element)
+                .withNext(null)
+                .build();
 
+        if (this.head == null) {
+            this.head = node;
+            this.tail = head;
+        } else {
+            node.next = this.head;
+            this.head = node;
+        }
+        this.size++;
     }
 
     @Override
     public void addLast(@NonNull T element) {
+        Node<T> node = Node.<T>builder()
+                .withValue(element)
+                .withNext(null)
+                .build();
 
+        if (this.head == null) {
+            this.head = node;
+            this.tail = this.head;
+        } else {
+            this.tail.next = node;
+            this.tail = this.tail.next;
+        }
+        this.size++;
     }
 
     @Override
-    public void remove(@NonNull T element, int index) {
+    public void remove(int index) {
 
     }
 
     @Override
     public void removeFirst() {
-
+        if (this.head != null) {
+            this.head = this.head.next;
+        }
+        this.size--;
     }
 
     @Override
     public void removeLast() {
+        Node<T> prev = this.head;
+        if (prev == null) {
+            return;
+        }
 
+        if (prev.next == null) {
+            this.head = null;
+            return;
+        }
+
+        while (prev.next.next != null) {
+            prev = prev.next;
+        }
+        prev.next = null;
+        this.tail = prev;
+        this.size--;
     }
 
     @Override
     public void clear() {
-
+        Node<T> node = this.head;
+        while (node != null) {
+            this.removeLast();
+            node = node.next;
+        }
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return this.head == null && this.size == 0;
     }
 
     @Override
     public boolean contains(@NonNull T element) {
+        Node<T> node = this.head;
+        while (node != null) {
+            if (node.value.equals(element)) {
+                return true;
+            }
+            node = node.next;
+        }
         return false;
     }
 
     @Override
-    public T get(@NonNull T element) {
-        return null;
+    public T get(int index) {
+        Node<T> node = this.head;
+        int i = 0;
+        while (node != null && i < index) {
+            i++;
+            node = node.next;
+        }
+        return node != null ? node.value : null;
     }
 
     @Override
     public T getFirst() {
+        if (this.head != null) {
+            return this.head.value;
+        }
         return null;
     }
 
     @Override
     public T getLast() {
+        if (this.tail != null) {
+            return this.tail.value;
+        }
         return null;
     }
 
     @Override
     public T poll(@NonNull T element) {
-        return null;
+        if (this.head == null) {
+            return null;
+        }
+        if (this.head.value.equals(element)) {
+            T value = this.head.value;
+            this.head = head.next;
+            this.size--;
+            return value;
+        }
+
+        Node<T> node = this.head;
+        T value = null;
+        while (node.next != null) {
+            if (node.next.value.equals(element)) {
+                value = node.next.value;
+                this.size--;
+                node = node.next.next;
+            }
+            node = node.next;
+        }
+        return value;
     }
 
     @Override
     public boolean hasNext(){
+        if (this.head != null){
+            return this.head.next != null;
+        }
         return false;
     }
 
     @Override
     public T next(){
-        return null;
+       return null;
     }
 }
 

@@ -29,10 +29,9 @@ public interface CustomList <T> {
 
     /**
      * Removes element from specific position
-     * @param element removing element
      * @param index position of element to remove
      */
-    void remove(@NonNull T element, int index);
+    void remove(int index);
 
     /**
      * Removes element from beginning of the list
@@ -70,10 +69,10 @@ public interface CustomList <T> {
 
     /**
      * Gets element from list if it is present but not removes
-     * @param element element to get from list
+     * @param index element position
      * @return T element null otherwise
      */
-    T get(@NonNull T element);
+    T get(int index);
 
     /**
      * Gets element from beginning of list if it is present but not removes
