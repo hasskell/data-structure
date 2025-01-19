@@ -8,7 +8,7 @@ import org.datastructures.interfaces.CustomList;
 
 /**
  * Implementation of CustomLinked list
- * @param <T>
+ * @param <T> Type of the list
  */
 public class CustomLinkedList <T> implements CustomList<T> {
     private Node<T> head;

@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/CustomList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/CustomList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/datastructures/linkedlists/CustomLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/datastructures/linkedlists/CustomLinkedListTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -175,7 +170,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737198562449</updated>
       <workItem from="1737198563739" duration="1622000" />
-      <workItem from="1737201229394" duration="15964000" />
+      <workItem from="1737201229394" duration="16502000" />
     </task>
     <servers />
   </component>
@@ -187,27 +182,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomLinkedList.java</url>
-          <line>164</line>
+          <line>160</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/datastructures/linkedlists/CustomLinkedListTest.java</url>
-          <line>149</line>
+          <line>157</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/datastructures/linkedlists/CustomLinkedListTest.java</url>
-          <line>60</line>
+          <line>64</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/datastructures/linkedlists/CustomLinkedListTest.java</url>
-          <line>26</line>
+          <line>30</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomLinkedList.java</url>
-          <line>119</line>
+          <line>115</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
       </breakpoints>
