@@ -66,7 +66,35 @@ public class CustomLinkedList <T> implements CustomList<T> {
 
     @Override
     public void add(@NonNull T element, int index) {
+        if (index > this.size) {
+            throw new IndexOutOfBoundsException();
+        }
+        Node<T> newNode = Node.<T>builder()
+                .withValue(element)
+                .withNext(null)
+                .build();
+        if (index == 0 || this.head == null) {
+            this.addFirst(element);
+            return;
+        }
 
+        if(index == this.size - 1){
+            this.addLast(element);
+            return;
+        }
+
+        int i = 0;
+        Node<T> curr = this.head;
+        while (curr != null) {
+            if (i + 1 == index) {
+                newNode.next = curr.next;
+                curr.next = newNode;
+                this.size++;
+                break;
+            }
+            i++;
+            curr = curr.next;
+        }
     }
 
     @Override
@@ -105,7 +133,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
 
     @Override
     public void remove(int index) {
-
+        //ToDo
     }
 
     @Override
@@ -232,6 +260,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
 
     @Override
     public T next(){
+        //ToDo
        return null;
     }
 }

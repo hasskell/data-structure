@@ -26,8 +26,8 @@ class CustomLinkedListTest {
         CustomList<Integer> test = CustomLinkedList.of(1, 4, 5);
         test.add(2, 1);
         test.add(3, 2);
-        assertEquals(2, test.get(2));
-        assertEquals(3, test.get(3));
+        assertEquals(2, test.get(1));
+        assertEquals(3, test.get(2));
     }
 
     @Test

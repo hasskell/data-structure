@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/CustomList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/CustomList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomLinkedList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/datastructures/linkedlists/CustomLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/datastructures/linkedlists/CustomLinkedListTest.java" afterDir="false" />
     </list>
@@ -40,7 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "JUnit.CustomLinkedListTest.executor": "Run",
-    "JUnit.CustomLinkedListTest.test_add_element.executor": "Debug",
+    "JUnit.CustomLinkedListTest.test_add_element.executor": "Run",
     "JUnit.CustomLinkedListTest.test_add_first_element.executor": "Run",
     "JUnit.CustomLinkedListTest.test_add_last_element.executor": "Debug",
     "JUnit.CustomLinkedListTest.test_poll.executor": "Debug",
@@ -67,7 +65,7 @@
       <recent name="org.datastructures.linkedlists" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomLinkedListTest">
+  <component name="RunManager" selected="JUnit.CustomLinkedListTest.test_add_element">
     <configuration name="CustomLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructures" />
       <extension name="coverage">
@@ -149,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomLinkedListTest.test_add_element" />
         <item itemvalue="JUnit.CustomLinkedListTest" />
         <item itemvalue="JUnit.CustomLinkedListTest.test_remove_last_element" />
         <item itemvalue="JUnit.CustomLinkedListTest.test_remove_first_element" />
         <item itemvalue="JUnit.CustomLinkedListTest.test_add_first_element" />
-        <item itemvalue="JUnit.CustomLinkedListTest.test_add_element" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +172,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737198562449</updated>
       <workItem from="1737198563739" duration="1622000" />
-      <workItem from="1737201229394" duration="10338000" />
+      <workItem from="1737201229394" duration="13505000" />
     </task>
     <servers />
   </component>
@@ -186,7 +184,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomLinkedList.java</url>
-          <line>112</line>
+          <line>139</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -201,8 +199,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/datastructures/linkedlists/CustomLinkedListTest.java</url>
-          <line>25</line>
-          <option name="timeStamp" value="8" />
+          <line>26</line>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
