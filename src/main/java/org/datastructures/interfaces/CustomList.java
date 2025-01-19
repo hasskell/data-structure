@@ -9,11 +9,13 @@ import lombok.NonNull;
 public interface CustomList <T> {
 
     /**
+     *
      * Adds element to specific index
      * @param element new element to add
      * @param index position of new element
+     * @throws IndexOutOfBoundsException if index is out of bounds
      */
-    void add(@NonNull T element, int index);
+    void add(@NonNull T element, int index) throws IndexOutOfBoundsException;
 
     /**
      * Adds element to first position in list
@@ -30,8 +32,9 @@ public interface CustomList <T> {
     /**
      * Removes element from specific position
      * @param index position of element to remove
+     * @throws IndexOutOfBoundsException if index is out of bounds
      */
-    void remove(int index);
+    void remove(int index) throws IndexOutOfBoundsException;
 
     /**
      * Removes element from beginning of the list
@@ -72,7 +75,7 @@ public interface CustomList <T> {
      * @param index element position
      * @return T element null otherwise
      */
-    T get(int index);
+    T get(int index) throws IndexOutOfBoundsException;
 
     /**
      * Gets element from beginning of list if it is present but not removes
@@ -93,15 +96,4 @@ public interface CustomList <T> {
      */
     T poll(@NonNull T element);
 
-    /**
-     * Determine of List has next element
-     * @return true if list has next element null otherwise
-     */
-    boolean hasNext();
-
-    /**
-     * Returns next element in list
-     * @return next element or null
-     */
-    T next();
 }

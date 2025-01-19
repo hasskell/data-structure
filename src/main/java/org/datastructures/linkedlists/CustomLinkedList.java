@@ -6,7 +6,6 @@ import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.datastructures.interfaces.CustomList;
 
-
 /**
  * Implementation of CustomLinked list
  * @param <T>
@@ -66,9 +65,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
 
     @Override
     public void add(@NonNull T element, int index) {
-        if (index > this.size) {
-            throw new IndexOutOfBoundsException();
-        }
+        this.checkIndex(index);
         Node<T> newNode = Node.<T>builder()
                 .withValue(element)
                 .withNext(null)
@@ -78,7 +75,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
             return;
         }
 
-        if(index == this.size - 1){
+        if(index == this.size){
             this.addLast(element);
             return;
         }
@@ -133,7 +130,30 @@ public class CustomLinkedList <T> implements CustomList<T> {
 
     @Override
     public void remove(int index) {
-        //ToDo
+        this.checkIndex(index);
+        if (index == 0 && this.head != null) {
+            if (this.head.next != null) {
+                this.head = this.head.next;
+                this.size--;
+            } else {
+                this.head = null;
+                this.tail = null;
+                this.size--;
+                return;
+            }
+        }
+
+        int i = 0;
+        Node<T> curr = this.head;
+        while (curr != null) {
+            if (i + 1 == index) {
+                curr.next = curr.next.next;
+                this.size--;
+                break;
+            }
+            i++;
+            curr = curr.next;
+        }
     }
 
     @Override
@@ -237,31 +257,24 @@ public class CustomLinkedList <T> implements CustomList<T> {
             return value;
         }
 
-        Node<T> node = this.head;
+        Node<T> prev = this.head;
         T value = null;
-        while (node.next != null) {
-            if (node.next.value.equals(element)) {
-                value = node.next.value;
+        while (prev.next != null) {
+            if (prev.next.value.equals(element)) {
+                value = prev.next.value;
+                prev.next = prev.next.next;
                 this.size--;
-                node = node.next.next;
+                break;
             }
-            node = node.next;
+            prev = prev.next;
         }
         return value;
     }
 
-    @Override
-    public boolean hasNext(){
-        if (this.head != null){
-            return this.head.next != null;
+    private void checkIndex(int index) {
+        if (index > this.size || index < 0) {
+            throw new IndexOutOfBoundsException();
         }
-        return false;
-    }
-
-    @Override
-    public T next(){
-        //ToDo
-       return null;
     }
 }
 

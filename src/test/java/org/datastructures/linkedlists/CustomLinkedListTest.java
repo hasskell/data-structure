@@ -3,7 +3,11 @@ package org.datastructures.linkedlists;
 import org.datastructures.interfaces.CustomList;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CustomLinkedListTest {
     @Test
@@ -31,8 +35,23 @@ class CustomLinkedListTest {
     }
 
     @Test
+    public void test_add_element_to_empty_list(){
+        CustomList<Integer> test = CustomLinkedList.of();
+        assertThrows(IndexOutOfBoundsException.class, () -> test.add(12, -1));
+        assertThrows(IndexOutOfBoundsException.class, () -> test.add(13, 10));
+        test.add(10, 0);
+        test.add(11, 1);
+        test.add(12, 1);
+
+        assertEquals(10, test.get(0));
+        assertEquals(12, test.get(1));
+        assertEquals(11, test.get(2));
+
+    }
+
+    @Test
     public void test_add_first_element(){
-        CustomList<Integer> test = CustomLinkedList.of( 3, 4, 5);
+        CustomList<Integer> test = CustomLinkedList.of();
         test.addFirst(2);
         test.addFirst(1);
         assertEquals(2, test.get(1));
@@ -41,17 +60,29 @@ class CustomLinkedListTest {
 
     @Test
     public void test_add_last_element(){
-        CustomList<Integer> test = CustomLinkedList.of( 1, 2, 3);
+        CustomList<Integer> test = CustomLinkedList.of();
         test.addLast(4);
         test.addLast(5);
-        assertEquals(4, test.get(3));
-        assertEquals(5, test.get(4));
+        test.addLast(1);
+        assertEquals(4, test.get(0));
+        assertEquals(5, test.get(1));
+        assertEquals(1, test.get(2));
     }
 
     @Test
     public void test_remove_element(){
-        CustomList<Integer> test = CustomLinkedList.of(1, 4, 5);
+        CustomList<Integer> test = CustomLinkedList.of(1, 2, 3, 4, 5);
+        test.remove(0);
+        assertEquals(2, test.get(0));
+
         test.remove(1);
+        assertEquals(4, test.get(1));
+
+        test.remove(2);
+        assertEquals(4, test.get(1));
+
+        assertThrows(IndexOutOfBoundsException.class, () -> test.remove(-1));
+        assertThrows(IndexOutOfBoundsException.class, () -> test.remove(10));
 
     }
 
@@ -124,23 +155,12 @@ class CustomLinkedListTest {
     @Test
     public void test_poll(){
         CustomList<Integer> test = CustomLinkedList.of(1, 2, 3, 4, 5);
-        CustomList<Integer> expected = CustomLinkedList.of(1, 3, 4, 5);
-        test.poll(2);
-        assertSame(expected, test);
-    }
-
-    @Test
-    public void test_has_next(){
-        CustomList<Integer> test = CustomLinkedList.of(1, 2);
-        assertTrue(test.hasNext());
-        test.next();
-        assertFalse(test.hasNext());
-    }
-
-    @Test
-    public void test_next(){
-        CustomList<Integer> test = CustomLinkedList.of(1, 2);
-        assertEquals(test.next(), 2);
-        assertNull(test.next());
+        Integer item = test.poll(2);
+        assertEquals(2, item);
+        assertEquals(1, test.get(0));
+        assertEquals(3, test.get(1));
+        assertEquals(4, test.get(2));
+        assertEquals(5, test.get(3));
+        assertEquals(4, test.size());
     }
 }
