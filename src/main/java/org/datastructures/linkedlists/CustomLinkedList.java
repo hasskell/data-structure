@@ -25,7 +25,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
      * @return CustomLinkedList
      * @param <T> Type of List
      */
-    public static <T> CustomLinkedList<T> of() {
+    public static <T> CustomList<T> of() {
         return new CustomLinkedList<T>();
     }
 
@@ -35,8 +35,8 @@ public class CustomLinkedList <T> implements CustomList<T> {
      * @return CustomLinkedList
      * @param <T> Type of List
      */
-    public static <T> CustomLinkedList<T> of(@NonNull T value) {
-        CustomLinkedList<T> linkedList = new CustomLinkedList<T>();
+    public static <T> CustomList<T> of(@NonNull T value) {
+        CustomList<T> linkedList = new CustomLinkedList<T>();
         linkedList.addLast(value);
         return linkedList;
     }
@@ -47,8 +47,8 @@ public class CustomLinkedList <T> implements CustomList<T> {
      * @return CustomLinkedList
      * @param <T> Type of List
      */
-    public static <T> CustomLinkedList<T> of(@NonNull T ... values) {
-        CustomLinkedList<T> linkedList = new CustomLinkedList<T>();
+    public static <T> CustomList<T> of(@NonNull T ... values) {
+        CustomList<T> linkedList = new CustomLinkedList<T>();
         for (T value : values) {
             linkedList.addLast(value);
         }
@@ -65,7 +65,7 @@ public class CustomLinkedList <T> implements CustomList<T> {
 
     @Override
     public void add(@NonNull T element, int index) {
-        this.checkIndex(index);
+        this.checkIndex(index, this.size);
         Node<T> newNode = Node.<T>builder()
                 .withValue(element)
                 .withNext(null)
@@ -119,18 +119,17 @@ public class CustomLinkedList <T> implements CustomList<T> {
                 .build();
 
         if (this.head == null) {
-            this.head = node;
-            this.tail = this.head;
+            this.addFirst(element);
         } else {
             this.tail.next = node;
             this.tail = this.tail.next;
+            this.size++;
         }
-        this.size++;
     }
 
     @Override
     public void remove(int index) {
-        this.checkIndex(index);
+        this.checkIndex(index, this.size);
         if (index == 0 && this.head != null) {
             if (this.head.next != null) {
                 this.head = this.head.next;
@@ -269,12 +268,6 @@ public class CustomLinkedList <T> implements CustomList<T> {
             prev = prev.next;
         }
         return value;
-    }
-
-    private void checkIndex(int index) {
-        if (index > this.size || index < 0) {
-            throw new IndexOutOfBoundsException();
-        }
     }
 }
 

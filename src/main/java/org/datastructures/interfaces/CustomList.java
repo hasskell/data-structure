@@ -96,4 +96,15 @@ public interface CustomList <T> {
      */
     T poll(@NonNull T element);
 
+    /**
+     * Default method that check if index is out of bounds
+     * @param index index passed to list
+     * @param size size of current list
+     * @throws IndexOutOfBoundsException if index out ouf bounds
+     */
+    default void checkIndex(int index, int size) throws IndexOutOfBoundsException {
+        if (index > size || index < 0) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
 }
