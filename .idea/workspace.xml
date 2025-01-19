@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="" />
+    <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/datastructures/linkedlists/CustomDoublyLinkedListTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +65,22 @@
       <recent name="org.datastructures.linkedlists" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomLinkedListTest.test_remove_element">
+  <component name="RunManager" selected="JUnit.CustomDoublyLinkedListTest">
+    <configuration name="CustomDoublyLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DataStructures" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.datastructures.linkedlists.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
+      <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomDoublyLinkedListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructures" />
       <extension name="coverage">
@@ -111,22 +128,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomLinkedListTest.test_add_last_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DataStructures" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.datastructures.linkedlists.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
-      <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomLinkedListTest" />
-      <option name="METHOD_NAME" value="test_add_last_element" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CustomLinkedListTest.test_remove_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructures" />
       <extension name="coverage">
@@ -145,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CustomDoublyLinkedListTest" />
         <item itemvalue="JUnit.CustomLinkedListTest.test_remove_element" />
         <item itemvalue="JUnit.CustomLinkedListTest" />
         <item itemvalue="JUnit.CustomLinkedListTest.test_add_first_element" />
         <item itemvalue="JUnit.CustomLinkedListTest.test_add_element_to_empty_list" />
-        <item itemvalue="JUnit.CustomLinkedListTest.test_add_last_element" />
       </list>
     </recent_temporary>
   </component>
@@ -170,7 +171,7 @@
       <option name="presentableId" value="Default" />
       <updated>1737198562449</updated>
       <workItem from="1737198563739" duration="1622000" />
-      <workItem from="1737201229394" duration="16502000" />
+      <workItem from="1737201229394" duration="16861000" />
     </task>
     <servers />
   </component>
