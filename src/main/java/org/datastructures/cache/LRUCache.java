@@ -6,9 +6,14 @@ import org.datastructures.interfaces.Cache;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Implementation of Least Recently Used cache (LRU) with O(1) complexity
+ * @param <K> Key of the cache
+ * @param <V> Value of the cache
+ */
 public class LRUCache<K, V> implements Cache<K, V> {
     private final int capacity;
-    private final Map<K, V> storage;
+    private final Map<K, Node<K, V>> storage;
     private Node<K, V> head;
     private Node<K, V> tail;
     private int size;
@@ -59,6 +64,12 @@ public class LRUCache<K, V> implements Cache<K, V> {
 
     @Override
     public V get(K key) {
+        if (storage.containsKey(key)) {
+            Node<K, V> node = storage.get(key);
+            this.remove(node);
+            this.setHead(node);
+            return node.value;
+        }
         return null;
     }
 
@@ -69,7 +80,10 @@ public class LRUCache<K, V> implements Cache<K, V> {
 
     @Override
     public void clear() {
-
+        this.storage.clear();
+        while (head != null) {
+            this.remove(head);
+        }
     }
 
     @Override
