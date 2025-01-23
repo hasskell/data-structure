@@ -1,16 +1,35 @@
 package org.datastructures.cache;
 
+import lombok.Builder;
 import org.datastructures.interfaces.Cache;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LRUCache<K, V> implements Cache<K, V> {
-    private int capacity;
+    private final int capacity;
+    private final Map<K, V> storage;
+    private Node<K, V> head;
+    private Node<K, V> tail;
+    private int size;
 
     private LRUCache(int capacity) {
+        if (capacity <= 0) {
+            throw new IllegalArgumentException();
+        }
         this.capacity = capacity;
+        this.storage = new HashMap<>();
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
     }
 
     private LRUCache() {
         this.capacity = 10;
+        this.storage = new HashMap<>();
+        this.head = null;
+        this.tail = null;
+        this.size = 0;
     }
 
     /**
@@ -55,6 +74,22 @@ public class LRUCache<K, V> implements Cache<K, V> {
 
     @Override
     public int size() {
-        return 0;
+        return this.size;
+    }
+
+    private void setHead(Node<K, V> node) {
+
+    }
+
+    private void remove(Node<K, V> node) {
+
+    }
+
+    @Builder(setterPrefix = "with")
+    private static class Node<K, V> {
+        private K key;
+        private V value;
+        public Node<K, V> next;
+        public Node<K, V> prev;
     }
 }
