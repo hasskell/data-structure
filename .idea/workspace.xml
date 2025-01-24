@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/Queue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/queue/DoubleStackQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/datastructures/queue/DoubleStackQueueTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/cache/LRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/cache/LRUCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/Cache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/Cache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/datastructures/cache/LRUCacheTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/datastructures/cache/LRUCacheTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,48 +36,50 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.CustomDoublyLinkedListTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomDoublyLinkedListTest.test_add_first_element.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomDoublyLinkedListTest.test_poll.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomDoublyLinkedListTest.test_remove_element.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.CustomDoublyLinkedListTest.test_remove_first_element.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomDoublyLinkedListTest.test_remove_last_element.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomDoublyLinkedListTest.test_size.executor&quot;: &quot;Debug&quot;,
-    &quot;JUnit.CustomLinkedListTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomLinkedListTest.test_add_element.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomLinkedListTest.test_add_element_to_empty_list.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomLinkedListTest.test_add_first_element.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomLinkedListTest.test_add_last_element.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomLinkedListTest.test_poll.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomLinkedListTest.test_remove_element.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomLinkedListTest.test_remove_first_element.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.CustomLinkedListTest.test_remove_last_element.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.LRUCacheTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.CustomDoublyLinkedListTest.executor": "Run",
+    "JUnit.CustomDoublyLinkedListTest.test_add_first_element.executor": "Run",
+    "JUnit.CustomDoublyLinkedListTest.test_poll.executor": "Run",
+    "JUnit.CustomDoublyLinkedListTest.test_remove_element.executor": "Debug",
+    "JUnit.CustomDoublyLinkedListTest.test_remove_first_element.executor": "Run",
+    "JUnit.CustomDoublyLinkedListTest.test_remove_last_element.executor": "Run",
+    "JUnit.CustomDoublyLinkedListTest.test_size.executor": "Debug",
+    "JUnit.CustomLinkedListTest.executor": "Run",
+    "JUnit.CustomLinkedListTest.test_add_element.executor": "Run",
+    "JUnit.CustomLinkedListTest.test_add_element_to_empty_list.executor": "Run",
+    "JUnit.CustomLinkedListTest.test_add_first_element.executor": "Run",
+    "JUnit.CustomLinkedListTest.test_add_last_element.executor": "Run",
+    "JUnit.CustomLinkedListTest.test_poll.executor": "Run",
+    "JUnit.CustomLinkedListTest.test_remove_element.executor": "Run",
+    "JUnit.CustomLinkedListTest.test_remove_first_element.executor": "Run",
+    "JUnit.CustomLinkedListTest.test_remove_last_element.executor": "Run",
+    "JUnit.DoubleStackQueueTest.executor": "Run",
+    "JUnit.LRUCacheTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.datastructures.queue" />
       <recent name="org.datastructures.cache" />
       <recent name="org.datastructures.linkedlists" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LRUCacheTest">
+  <component name="RunManager" selected="JUnit.DoubleStackQueueTest">
     <configuration name="CustomDoublyLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructures" />
       <extension name="coverage">
@@ -109,22 +111,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomDoublyLinkedListTest.test_remove_last_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DataStructures" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.datastructures.linkedlists.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
-      <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomDoublyLinkedListTest" />
-      <option name="METHOD_NAME" value="test_remove_last_element" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="CustomLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructures" />
       <extension name="coverage">
@@ -135,6 +121,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
       <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomLinkedListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoubleStackQueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DataStructures" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.datastructures.queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.datastructures.queue" />
+      <option name="MAIN_CLASS_NAME" value="org.datastructures.queue.DoubleStackQueueTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -157,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DoubleStackQueueTest" />
         <item itemvalue="JUnit.LRUCacheTest" />
         <item itemvalue="JUnit.CustomDoublyLinkedListTest" />
         <item itemvalue="JUnit.CustomDoublyLinkedListTest.test_poll" />
         <item itemvalue="JUnit.CustomLinkedListTest" />
-        <item itemvalue="JUnit.CustomDoublyLinkedListTest.test_remove_last_element" />
       </list>
     </recent_temporary>
   </component>
@@ -187,7 +188,8 @@
       <workItem from="1737455994089" duration="2980000" />
       <workItem from="1737570209475" duration="1573000" />
       <workItem from="1737657560205" duration="1609000" />
-      <workItem from="1737711969833" duration="689000" />
+      <workItem from="1737711969833" duration="1011000" />
+      <workItem from="1737722498534" duration="1519000" />
     </task>
     <servers />
   </component>
