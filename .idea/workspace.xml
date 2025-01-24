@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/Queue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/queue/DoubleStackQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/datastructures/queue/DoubleStackQueueTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/queue/DoubleStackQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/queue/DoubleStackQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +52,7 @@
     "JUnit.CustomLinkedListTest.test_remove_first_element.executor": "Run",
     "JUnit.CustomLinkedListTest.test_remove_last_element.executor": "Run",
     "JUnit.DoubleStackQueueTest.executor": "Run",
+    "JUnit.DoubleStackQueueTest.test_enqueue.executor": "Run",
     "JUnit.LRUCacheTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -111,21 +109,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DataStructures" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.datastructures.linkedlists.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
-      <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomLinkedListTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DoubleStackQueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructures" />
       <extension name="coverage">
@@ -137,6 +120,22 @@
       <option name="PACKAGE_NAME" value="org.datastructures.queue" />
       <option name="MAIN_CLASS_NAME" value="org.datastructures.queue.DoubleStackQueueTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DoubleStackQueueTest.test_enqueue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DataStructures" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.datastructures.queue.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.datastructures.queue" />
+      <option name="MAIN_CLASS_NAME" value="org.datastructures.queue.DoubleStackQueueTest" />
+      <option name="METHOD_NAME" value="test_enqueue" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -159,10 +158,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.DoubleStackQueueTest" />
+        <item itemvalue="JUnit.DoubleStackQueueTest.test_enqueue" />
         <item itemvalue="JUnit.LRUCacheTest" />
         <item itemvalue="JUnit.CustomDoublyLinkedListTest" />
         <item itemvalue="JUnit.CustomDoublyLinkedListTest.test_poll" />
-        <item itemvalue="JUnit.CustomLinkedListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +188,7 @@
       <workItem from="1737570209475" duration="1573000" />
       <workItem from="1737657560205" duration="1609000" />
       <workItem from="1737711969833" duration="1011000" />
-      <workItem from="1737722498534" duration="1519000" />
+      <workItem from="1737722498534" duration="1834000" />
     </task>
     <servers />
   </component>
