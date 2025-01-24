@@ -7,13 +7,28 @@ package org.datastructures.interfaces;
  */
 public interface Cache <K,V>{
 
+    /**
+     * Puts key in to the caches
+     * @param key Cache Key
+     * @param value Cache Values
+     */
     void put(K key, V value);
 
+    /**
+     * Gets key from cache
+     * @param key Cache Key
+     * @return Cache Values
+     */
     V get(K key);
 
-    void remove(K key);
-
+    /**
+     * Resets cache, essentially makes it empty
+     */
     void clear();
 
+    /**
+     * Returns current size of Cache
+     * @return Cache size
+     */
     int size();
 }

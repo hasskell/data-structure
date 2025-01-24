@@ -59,16 +59,4 @@ class LRUCacheTest {
         this.cache.clear();
         assertEquals(0, cache.size());
     }
-
-    @Test
-    public void test_remove(){
-        this.cache.put(1, 1);
-        this.cache.put(2, 2);
-        this.cache.put(3, 3);
-        assertEquals(3, cache.size());
-
-        this.cache.remove(3);
-        assertEquals(2, cache.size());
-        assertNull(cache.get(3));
-    }
 }

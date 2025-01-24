@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="" />
+    <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/cache/LRUCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/cache/LRUCache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/Cache.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/interfaces/Cache.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/datastructures/cache/LRUCacheTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/datastructures/cache/LRUCacheTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +54,7 @@
     &quot;JUnit.CustomLinkedListTest.test_remove_element.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CustomLinkedListTest.test_remove_first_element.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.CustomLinkedListTest.test_remove_last_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LRUCacheTest.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
     &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
@@ -67,10 +73,11 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.datastructures.cache" />
       <recent name="org.datastructures.linkedlists" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CustomDoublyLinkedListTest">
+  <component name="RunManager" selected="JUnit.LRUCacheTest">
     <configuration name="CustomDoublyLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructures" />
       <extension name="coverage">
@@ -97,22 +104,6 @@
       <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
       <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomDoublyLinkedListTest" />
       <option name="METHOD_NAME" value="test_poll" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomDoublyLinkedListTest.test_remove_first_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DataStructures" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.datastructures.linkedlists.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
-      <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomDoublyLinkedListTest" />
-      <option name="METHOD_NAME" value="test_remove_first_element" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,13 +140,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LRUCacheTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DataStructures" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.datastructures.cache.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.datastructures.cache" />
+      <option name="MAIN_CLASS_NAME" value="org.datastructures.cache.LRUCacheTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LRUCacheTest" />
         <item itemvalue="JUnit.CustomDoublyLinkedListTest" />
         <item itemvalue="JUnit.CustomDoublyLinkedListTest.test_poll" />
         <item itemvalue="JUnit.CustomLinkedListTest" />
         <item itemvalue="JUnit.CustomDoublyLinkedListTest.test_remove_last_element" />
-        <item itemvalue="JUnit.CustomDoublyLinkedListTest.test_remove_first_element" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +185,9 @@
       <workItem from="1737201229394" duration="20594000" />
       <workItem from="1737297958393" duration="5732000" />
       <workItem from="1737455994089" duration="2980000" />
-      <workItem from="1737570209475" duration="524000" />
+      <workItem from="1737570209475" duration="1573000" />
+      <workItem from="1737657560205" duration="1609000" />
+      <workItem from="1737711969833" duration="689000" />
     </task>
     <servers />
   </component>

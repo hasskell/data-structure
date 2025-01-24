@@ -8,6 +8,7 @@ import java.util.Map;
 
 /**
  * Implementation of Least Recently Used cache (LRU) with O(1) complexity
+ *
  * @param <K> Key of the cache
  * @param <V> Value of the cache
  */
@@ -16,7 +17,6 @@ public class LRUCache<K, V> implements Cache<K, V> {
     private final Map<K, Node<K, V>> storage;
     private Node<K, V> head;
     private Node<K, V> tail;
-    private int size;
 
     private LRUCache(int capacity) {
         if (capacity <= 0) {
@@ -26,7 +26,6 @@ public class LRUCache<K, V> implements Cache<K, V> {
         this.storage = new HashMap<>();
         this.head = null;
         this.tail = null;
-        this.size = 0;
     }
 
     private LRUCache() {
@@ -34,14 +33,14 @@ public class LRUCache<K, V> implements Cache<K, V> {
         this.storage = new HashMap<>();
         this.head = null;
         this.tail = null;
-        this.size = 0;
     }
 
     /**
      * Creates instance of LRU cache with default capacity of 10 elements
-     * @return Cache instance
+     *
      * @param <K> Cache Key
      * @param <V> Cache Values
+     * @return Cache instance
      */
     public static <K, V> LRUCache<K, V> of() {
         return new LRUCache<>();
@@ -49,9 +48,10 @@ public class LRUCache<K, V> implements Cache<K, V> {
 
     /**
      * Creates instance of LRU cache with specified capacity
-     * @return Cache instance
+     *
      * @param <K> Cache Key
      * @param <V> Cache Values
+     * @return Cache instance
      */
     public static <K, V> LRUCache<K, V> of(int capacity) {
         return new LRUCache<>(capacity);
@@ -59,7 +59,24 @@ public class LRUCache<K, V> implements Cache<K, V> {
 
     @Override
     public void put(K key, V value) {
-
+        if (this.storage.containsKey(key)){
+            Node<K, V> node = this.storage.get(key);
+            this.remove(node);
+            this.setHead(node);
+        } else {
+            Node<K, V> newNode = Node.<K, V>builder()
+                    .withKey(key)
+                    .withValue(value)
+                    .build();
+            if (this.storage.size() >= this.capacity) {
+                this.storage.remove(this.tail.key);
+                this.remove(this.tail);
+                this.setHead(newNode);
+            } else {
+                this.setHead(newNode);
+            }
+            this.storage.put(key, newNode);
+        }
     }
 
     @Override
@@ -74,11 +91,6 @@ public class LRUCache<K, V> implements Cache<K, V> {
     }
 
     @Override
-    public void remove(K key) {
-
-    }
-
-    @Override
     public void clear() {
         this.storage.clear();
         while (head != null) {
@@ -88,15 +100,35 @@ public class LRUCache<K, V> implements Cache<K, V> {
 
     @Override
     public int size() {
-        return this.size;
+        return this.storage.size();
     }
 
     private void setHead(Node<K, V> node) {
+        node.next = head;
+        node.prev = null;
 
+        if (this.head != null) {
+            this.head.prev = node;
+        }
+        this.head = node;
+
+        if (this.tail == null) {
+            this.tail = this.head;
+        }
     }
 
     private void remove(Node<K, V> node) {
+        if (node.prev != null) {
+            node.prev.next = node.next;
+        } else {
+            this.head = node.next;
+        }
 
+        if (node.next != null) {
+            node.next.prev = node.prev;
+        } else {
+            this.tail = node.prev;
+        }
     }
 
     @Builder(setterPrefix = "with")
