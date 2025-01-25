@@ -4,7 +4,7 @@ import lombok.NonNull;
 
 /**
  * Generic List Interface
- * @param <T>
+ * @param <T> Type of list
  */
 public interface CustomList <T> {
 

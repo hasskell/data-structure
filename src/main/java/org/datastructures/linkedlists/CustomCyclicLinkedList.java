@@ -1,9 +1,7 @@
 package org.datastructures.linkedlists;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.NonNull;
-import lombok.RequiredArgsConstructor;
+import org.datastructures.common.Node;
 import org.datastructures.interfaces.CustomList;
 
 public class CustomCyclicLinkedList<T> implements CustomList<T>{
@@ -49,14 +47,6 @@ public class CustomCyclicLinkedList<T> implements CustomList<T>{
             linkedList.addLast(value);
         }
         return linkedList;
-    }
-
-    @AllArgsConstructor
-    @RequiredArgsConstructor
-    @Builder(setterPrefix = "with")
-    private static class Node<T> {
-        private T value;
-        private Node<T> next;
     }
 
     @Override
