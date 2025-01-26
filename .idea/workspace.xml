@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alg/SpiralMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/tree/BinaryTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alg/LinkedListAgl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,9 +78,9 @@
       <recent name="org.datastructures.linkedlists" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SpiralMatrix">
-    <configuration name="SpiralMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.alg.SpiralMatrix" />
+  <component name="RunManager" selected="Application.LinkedListAgl">
+    <configuration name="LinkedListAgl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.alg.LinkedListAgl" />
       <module name="DataStructures" />
       <extension name="coverage">
         <pattern>
@@ -94,17 +92,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomDoublyLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SpiralMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.alg.SpiralMatrix" />
       <module name="DataStructures" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.datastructures.linkedlists.*" />
+          <option name="PATTERN" value="org.alg.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
-      <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomDoublyLinkedListTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.LinkedListAgl" />
         <item itemvalue="Application.SpiralMatrix" />
         <item itemvalue="JUnit.DoubleStackQueueTest" />
         <item itemvalue="JUnit.DoubleStackQueueTest.test_enqueue" />
         <item itemvalue="JUnit.LRUCacheTest" />
-        <item itemvalue="JUnit.CustomDoublyLinkedListTest" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +185,7 @@
       <workItem from="1737657560205" duration="1609000" />
       <workItem from="1737711969833" duration="1011000" />
       <workItem from="1737722498534" duration="3517000" />
-      <workItem from="1737804290100" duration="5071000" />
+      <workItem from="1737804290100" duration="5495000" />
     </task>
     <servers />
   </component>
