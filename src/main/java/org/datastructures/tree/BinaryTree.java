@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import org.datastructures.interfaces.Tree;
 
-public class BinaryTree <T> implements Tree<T> {
+public class BinaryTree <T extends Comparable<T>> implements Tree<T> {
 
     private Node<T> root;
 
@@ -20,9 +20,13 @@ public class BinaryTree <T> implements Tree<T> {
 
     @AllArgsConstructor
     @Builder(setterPrefix = "with")
-    private static class Node<T> {
+    private static class Node<T extends Comparable<T>> {
         private T value;
         private Node<T> left;
         private Node<T> right;
+
+        public int compareTo(T value) {
+            return this.value.compareTo(value);
+        }
     }
 }

@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/queue/DoubleStackQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/queue/DoubleStackQueue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alg/SpiralMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/tree/BinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -35,6 +37,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.SpiralMatrix.executor": "Run",
     "JUnit.CustomDoublyLinkedListTest.executor": "Run",
     "JUnit.CustomDoublyLinkedListTest.test_add_first_element.executor": "Run",
     "JUnit.CustomDoublyLinkedListTest.test_poll.executor": "Run",
@@ -52,7 +55,7 @@
     "JUnit.CustomLinkedListTest.test_remove_first_element.executor": "Run",
     "JUnit.CustomLinkedListTest.test_remove_last_element.executor": "Run",
     "JUnit.DoubleStackQueueTest.executor": "Run",
-    "JUnit.DoubleStackQueueTest.test_enqueue.executor": "Run",
+    "JUnit.DoubleStackQueueTest.test_enqueue.executor": "Debug",
     "JUnit.LRUCacheTest.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
@@ -77,7 +80,20 @@
       <recent name="org.datastructures.linkedlists" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.DoubleStackQueueTest">
+  <component name="RunManager" selected="Application.SpiralMatrix">
+    <configuration name="SpiralMatrix" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.alg.SpiralMatrix" />
+      <module name="DataStructures" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.alg.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CustomDoublyLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="DataStructures" />
       <extension name="coverage">
@@ -89,22 +105,6 @@
       <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
       <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomDoublyLinkedListTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CustomDoublyLinkedListTest.test_poll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DataStructures" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.datastructures.linkedlists.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.datastructures.linkedlists" />
-      <option name="MAIN_CLASS_NAME" value="org.datastructures.linkedlists.CustomDoublyLinkedListTest" />
-      <option name="METHOD_NAME" value="test_poll" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -157,11 +157,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SpiralMatrix" />
         <item itemvalue="JUnit.DoubleStackQueueTest" />
         <item itemvalue="JUnit.DoubleStackQueueTest.test_enqueue" />
         <item itemvalue="JUnit.LRUCacheTest" />
         <item itemvalue="JUnit.CustomDoublyLinkedListTest" />
-        <item itemvalue="JUnit.CustomDoublyLinkedListTest.test_poll" />
       </list>
     </recent_temporary>
   </component>
@@ -188,7 +188,8 @@
       <workItem from="1737570209475" duration="1573000" />
       <workItem from="1737657560205" duration="1609000" />
       <workItem from="1737711969833" duration="1011000" />
-      <workItem from="1737722498534" duration="1834000" />
+      <workItem from="1737722498534" duration="3517000" />
+      <workItem from="1737804290100" duration="5071000" />
     </task>
     <servers />
   </component>
@@ -200,7 +201,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomLinkedList.java</url>
-          <line>159</line>
+          <line>149</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -220,7 +221,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomLinkedList.java</url>
-          <line>115</line>
+          <line>105</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -232,6 +233,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/datastructures/linkedlists/CustomDoublyLinkedList.java</url>
           <line>264</line>
           <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/datastructures/queue/DoubleStackQueueTest.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
