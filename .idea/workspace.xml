@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e8d06584-cc38-476e-af68-4d9e4a429347" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alg/LinkedListAgl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/datastructures/tree/BinaryTreeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/datastructures/tree/BinaryTree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/datastructures/tree/BinaryTree.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +17,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -33,52 +35,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.SpiralMatrix.executor": "Run",
-    "JUnit.CustomDoublyLinkedListTest.executor": "Run",
-    "JUnit.CustomDoublyLinkedListTest.test_add_first_element.executor": "Run",
-    "JUnit.CustomDoublyLinkedListTest.test_poll.executor": "Run",
-    "JUnit.CustomDoublyLinkedListTest.test_remove_element.executor": "Debug",
-    "JUnit.CustomDoublyLinkedListTest.test_remove_first_element.executor": "Run",
-    "JUnit.CustomDoublyLinkedListTest.test_remove_last_element.executor": "Run",
-    "JUnit.CustomDoublyLinkedListTest.test_size.executor": "Debug",
-    "JUnit.CustomLinkedListTest.executor": "Run",
-    "JUnit.CustomLinkedListTest.test_add_element.executor": "Run",
-    "JUnit.CustomLinkedListTest.test_add_element_to_empty_list.executor": "Run",
-    "JUnit.CustomLinkedListTest.test_add_first_element.executor": "Run",
-    "JUnit.CustomLinkedListTest.test_add_last_element.executor": "Run",
-    "JUnit.CustomLinkedListTest.test_poll.executor": "Run",
-    "JUnit.CustomLinkedListTest.test_remove_element.executor": "Run",
-    "JUnit.CustomLinkedListTest.test_remove_first_element.executor": "Run",
-    "JUnit.CustomLinkedListTest.test_remove_last_element.executor": "Run",
-    "JUnit.DoubleStackQueueTest.executor": "Run",
-    "JUnit.DoubleStackQueueTest.test_enqueue.executor": "Debug",
-    "JUnit.LRUCacheTest.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.LinkedListAgl.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.SpiralMatrix.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BinaryTreeTest.test_add_element.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CustomDoublyLinkedListTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomDoublyLinkedListTest.test_add_first_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomDoublyLinkedListTest.test_poll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomDoublyLinkedListTest.test_remove_element.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CustomDoublyLinkedListTest.test_remove_first_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomDoublyLinkedListTest.test_remove_last_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomDoublyLinkedListTest.test_size.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.CustomLinkedListTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomLinkedListTest.test_add_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomLinkedListTest.test_add_element_to_empty_list.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomLinkedListTest.test_add_first_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomLinkedListTest.test_add_last_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomLinkedListTest.test_poll.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomLinkedListTest.test_remove_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomLinkedListTest.test_remove_first_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CustomLinkedListTest.test_remove_last_element.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoubleStackQueueTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DoubleStackQueueTest.test_enqueue.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.LRUCacheTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.datastructures.tree" />
       <recent name="org.datastructures.queue" />
       <recent name="org.datastructures.cache" />
       <recent name="org.datastructures.linkedlists" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LinkedListAgl">
+  <component name="RunManager" selected="JUnit.BinaryTreeTest.test_add_element">
     <configuration name="LinkedListAgl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.alg.LinkedListAgl" />
       <module name="DataStructures" />
@@ -101,6 +106,22 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinaryTreeTest.test_add_element" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="DataStructures" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.datastructures.tree.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.datastructures.tree" />
+      <option name="MAIN_CLASS_NAME" value="org.datastructures.tree.BinaryTreeTest" />
+      <option name="METHOD_NAME" value="test_add_element" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,28 +157,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LRUCacheTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="DataStructures" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.datastructures.cache.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.datastructures.cache" />
-      <option name="MAIN_CLASS_NAME" value="org.datastructures.cache.LRUCacheTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BinaryTreeTest.test_add_element" />
         <item itemvalue="Application.LinkedListAgl" />
         <item itemvalue="Application.SpiralMatrix" />
         <item itemvalue="JUnit.DoubleStackQueueTest" />
         <item itemvalue="JUnit.DoubleStackQueueTest.test_enqueue" />
-        <item itemvalue="JUnit.LRUCacheTest" />
       </list>
     </recent_temporary>
   </component>
@@ -185,7 +191,8 @@
       <workItem from="1737657560205" duration="1609000" />
       <workItem from="1737711969833" duration="1011000" />
       <workItem from="1737722498534" duration="3517000" />
-      <workItem from="1737804290100" duration="5495000" />
+      <workItem from="1737804290100" duration="8417000" />
+      <workItem from="1738003137541" duration="914000" />
     </task>
     <servers />
   </component>
@@ -234,6 +241,11 @@
           <url>file://$PROJECT_DIR$/src/test/java/org/datastructures/queue/DoubleStackQueueTest.java</url>
           <line>19</line>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/alg/LinkedListAgl.java</url>
+          <line>20</line>
+          <option name="timeStamp" value="20" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
