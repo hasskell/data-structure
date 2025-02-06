@@ -54,7 +54,23 @@ public class BinaryTree <T extends Comparable<T>> implements Tree<T> {
 
     @Override
     public void remove(T element) {
+        Node<T> current = this.root;
+        while (current != null) {
+            if (current.value.equals(element)) {
+                if (current.left != null) {
+                    current = current.left;
+                    return;
+                } else {
+                    current = current.right;
+                    return;
+                }
+            }
 
+            if (current.value.compareTo(element) < 0) {
+
+            }
+
+        }
     }
 
     @AllArgsConstructor
